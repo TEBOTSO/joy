@@ -1,0 +1,111 @@
+/**********   THE BODY (The entire webpage styling)   **********/
+/*We set that there is no space around the boarders of the webpage by using the marging property
+  We provide the margin property with the parameterzero0 to ensure there space around the webpage is zero (there is no space)
+  The parameter zero is followed by auto which will tell the browser to automatically determine the left and rigth margins itself,
+  which it does by setting them equally*/
+/*We set padding to be zero using the padding property which will then ensure there's no space inside the borders (like a frame)*
+/*We choose the font family to be san serif using the property font-family
+  We choose the sans-serif font because it is easier to read on screen as they have simpler design than serif fonts*/
+/* We set the background color to be a dark moderate lime green using the background property
+  The background property is a shorthand property for several background editting/styling properties
+  (background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip and
+  background-attachment => We used only the background-color section of the background property by only providing parameters/arguments for background-color)*/
+/***** THE WHOLE STYLING IS TO ENSURE WE GET RID OF BROWSER'S DEFAULT STYLING SO THAT THE WEBSITE IS THE SAME NO MATTER THE BROWSER'S DEFAULT STYLE *****/
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+  background: rgb(65, 166, 80);
+}
+
+/**********   WRAPPER (The entire content we created and then wrapped in a wrapper)   **********/
+/*set the width property to be 90% of that of the entire screen which will leave about 10% screen size space between the content wrapped in the website and the emtire webpage*/
+/*We set that there is no space around the boarders of the content wrapped in the wrapper by using the marging property
+  We provide the margin property with the parameter zero to ensure there space around the content in the wrapper is zero (there is no space)
+  The parameter zero is followed by auto which will tell the browser to automatically determine the left and rigth margins itself,
+  which it does by setting them equally; and since there is 10% screen space around the contents, it set them equally by centering the contents wrapped in the wrapper*/
+/* We set the background color to be a white using the background property
+    The background property is a shorthand property for several background editting/styling properties
+    (background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip and
+    background-attachment => We used only the background-color section of the background property by only providing parameters/arguments for background-color)*/
+/*Used the box-shadow property to add/attach two shadows
+  Set the side shaddow to be 7px and the vertical shadow to be 0 px so that the shadow can be small enough to bring in the feel of light without being too much (this will be on the right side)
+  Added a blur effect of 10px on the area where the shadow is to be upto a space of 10 pixels to average out rapid changes in pixel intensity (smoothing)
+  And set the color to be black with the transparecy(alpha) of 60%
+  Added an identical shaddow but located on the opposite side (done by making the width a negative number to be on the opposite side)*/
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.6), -7px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+/**********   SECTION WHICH IS A PART OF THE WEBSITE(CONTENTS) THAT CAN MAKE SENSE ON THEIR OWN   **********/
+/*We set padding to be 1% of that of the screen size using the padding property which will then ensure there is space between the section contents and they are not cramped*/
+section{
+  padding: 1%;
+}
+
+/**********   HEADER IMAGE (the img Which follows the .headerImage is to specify the exact image where as .headerImage specify only the wrappercontainer the image is contained in)  **********/
+/*Set the max-height property to 100vh which is suppose to set the height of the hearder image to be that of the actual screen*/
+/*Set the max-width property to 100vw which is suppose to set the width of the hearder image to be that of the actual screen*/
+/********** Note that due to the fact that we used max-height and max-width, the image will only be resized if either/both its height and width are bigger than the area(screen/section) size **********/
+.headerImage img{
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+/********** NAVIGATION BAR WHICH HOLDS DIFFERENT LINKS **********/
+/*We set that there is space around the boarders of the links by using the marging property
+  We provide the margin property with the parameter of 2% to create some space on the top and below the links which is of that of 2% the size of the screen*/
+nav{
+  margin: 2%;
+}
+
+/********** DIFFERENT LINKS ON NAVIGATION BAR (a TO SELECT THE LINKS IN THE NAVIGATION BAR)**********/
+/*We created some spaces between the links using the padding property
+  We set the first argument to 0.7% which will create a 0.7% space of that of the entire screen on top and below the links
+  We set the second argument to 2.5% which will create a 2.5% space of that of the entire screen on the left and right side of the links*/
+/*We set that there is space around the boarders of the links by using the marging property
+  We provide the margin property with the first parameter of 2% to create some space on the top and below the links which is of that of 2% the size of the screen
+  The second parameter is 1% which will create 1% soace of that of the screen size on the left and right side of the links*/
+/*We remove the underlines on the links using the property text-decoration and setting it to none*/
+/*Created some solid thin rectangle on top of the links using the broader-top property
+  Set the width of the thin rectangle to be 3px with the first argument for border-top
+  Set the second argument to be solid which will then ensure that the boarder line created on top is solis rectangle (thick line)
+  Set the color of the boarder line (Or thin rectangle) to be slightly desaturated red with the last argument*/
+/*Created some solid thin rectangle on the bottom of the links using the broader-bottom property
+  Set the width of the thin rectangle to be 3px with the first argument for border-bottom
+  Set the second argument to be solid which will then ensure that the boarder line created on top is solis rectangle (thick line)
+  Set the color of the boarder line (Or thin rectangle) to be slightly desaturated red with the last argument*/
+/*Allow the links to change values smoothly over a given duration using the transition property
+  First argument is all to add the transition property to all effects on the link
+  second argument is the duration of 0.5 seconds*/
+/*Set the color of the link's text to blue using the color property*/
+nav a{
+  padding: 0.7% 2.5%;
+  margin: 2% 1%;
+  text-decoration: none;
+  border-top: 3px solid rgba(191, 126, 142, 0.75);
+  border-bottom: 3px solid rgba(191, 126, 142, 0.75);
+  transition: all 0.5s;
+  color: rgb(0, 0, 255);
+}
+
+/********** HOVER LINKS WHENEVER THE CURSER IS ON TOP OF THE LINK **********/
+/*Used the box-shadow property to add/attach a shadows to the link whenever the cursor hover on top of it
+  Set the side shaddow to be 0px and the vertical shadow to be 2 px so that the shadow can be small enough to bring in the feel of light without being too much (this will be on the bottom)
+  Added a blur effect of 1px on the area where the shadow is to be upto a space of 10 pixels to average out rapid changes in pixel intensity (smoothing)
+  And set the color to be a strong yellow*/
+/*Used the text-shadow property to add/attach a shadows to the link's text whenever the cursor hover on top of it
+  Set the side shaddow to be 0px and the vertical shadow to be 2 px so that the shadow can be small enough to bring in the feel of light without being too much (this will be on the bottom)
+  Added a blur effect of 1px on the area where the shadow is to be upto a space of 10 pixels to average out rapid changes in pixel intensity (smoothing)
+  And set the color to be a strong yellow*/
+nav a:hover{
+  box-shadow: 0 2px 1px rgba(167, 179, 18, 0.7);
+  text-shadow: 0 2px 1px rgba(167, 179, 18, 0.7);
+}
+
+
+
+/* THE  DOT DICTATES A CLASS */
